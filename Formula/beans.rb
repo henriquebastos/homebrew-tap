@@ -3,7 +3,7 @@ class Beans < Formula
 
   desc "Graph-based issue tracker for AI agent coordination"
   homepage "https://github.com/henriquebastos/beans"
-  url "https://github.com/henriquebastos/beans/archive/refs/tags/v0.1.1.tar.gz"
+  url "https://github.com/henriquebastos/beans/archive/refs/tags/v0.4.1.tar.gz"
   license "MIT"
 
   depends_on "python@3.14"
