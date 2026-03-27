@@ -4,7 +4,7 @@ class JiraGenie < Formula
   desc "Your AI agent's interface to Jira Cloud"
   homepage "https://github.com/henriquebastos/jira-genie"
   url "https://files.pythonhosted.org/packages/source/j/jira-genie/jira_genie-0.2.2.tar.gz"
-  sha256 :no_check
+  sha256 "5d12a09c2e45467cd9e6e48036c721f584028a745366f08ea7f3621a1fd0a7db"
   license "MIT"
 
   depends_on "python@3.13"
