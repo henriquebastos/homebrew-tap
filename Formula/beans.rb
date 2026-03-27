@@ -6,11 +6,12 @@ class Beans < Formula
   license "MIT"
 
   depends_on "python@3.14"
+  depends_on "rust" => :build
 
   def install
     python3 = Formula["python@3.14"].opt_bin/"python3.14"
     system python3, "-m", "venv", libexec
-    system libexec/"bin/pip", "install", "--no-cache-dir", "magic-beans==#{version}"
+    system libexec/"bin/pip", "install", "--no-cache-dir", "--no-binary", "pydantic-core", "magic-beans==#{version}"
     bin.install_symlink Dir[libexec/"bin/beans"]
   end
 
