@@ -1,0 +1,24 @@
+name: Test Formulae
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        formula: [beans, jira-genie]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install formula
+        run: |
+          brew tap henriquebastos/tap $(pwd)
+          brew install ${{ matrix.formula }}
+
+      - name: Test formula
+        run: brew test ${{ matrix.formula }}
