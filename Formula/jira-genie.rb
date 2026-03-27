@@ -5,10 +5,10 @@ class JiraGenie < Formula
   sha256 "eb175492d2717b50e195b751a9edf8c9cfc4a859551a2fb68855e61344f9bccd"
   license "MIT"
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
-    python3 = Formula["python@3.13"].opt_bin/"python3.13"
+    python3 = Formula["python@3.14"].opt_bin/"python3.14"
     system python3, "-m", "venv", libexec
     system libexec/"bin/pip", "install", "--no-cache-dir", "jira-genie==#{version}"
     bin.install_symlink Dir[libexec/"bin/jira"]
