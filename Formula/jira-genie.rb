@@ -11,7 +11,7 @@ class JiraGenie < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.13")
-    venv.pip_install "jira-genie==#{version}"
+    system libexec/"bin/pip", "install", "jira-genie==#{version}"
     bin.install_symlink Dir[libexec/"bin/jira"]
   end
 
