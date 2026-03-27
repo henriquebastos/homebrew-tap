@@ -5,10 +5,10 @@ class Beans < Formula
   sha256 "b96908da6fb2047d85ff767f06196e77cb5cbea0b010db5c56ea1abdfc5d6898"
   license "MIT"
 
-  depends_on "python@3.14"
+  depends_on "python@3.13"
 
   def install
-    python3 = Formula["python@3.14"].opt_bin/"python3.14"
+    python3 = Formula["python@3.13"].opt_bin/"python3.13"
     system python3, "-m", "venv", libexec
     system libexec/"bin/pip", "install", "--no-cache-dir", "magic-beans==#{version}"
     bin.install_symlink Dir[libexec/"bin/beans"]
