@@ -1,8 +1,8 @@
 class Beans < Formula
   desc "Graph-based issue tracker for AI agent coordination"
   homepage "https://github.com/henriquebastos/beans"
-  url "https://github.com/henriquebastos/beans/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "a01d6ac9bbc1cfc90b5897a0690e6d9963e9cb3328cc101800cd3ff9810c30db"
+  url "https://github.com/henriquebastos/beans/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "070a754252bc6dc6191bf3cc0a64e4adbb49f9fcbad2f29fc6d8472afcbe92b0"
   license "MIT"
 
   depends_on "python@3.13"
